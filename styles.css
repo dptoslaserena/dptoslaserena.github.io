@@ -35,15 +35,49 @@ html, body { height: 100%; font-family: Inter, system-ui, -apple-system, "Segoe 
 .btn.secondary { background: #6b7280; }
 .btn:active { transform: translateY(1px); }
 
-/* Cards */
-.cards-section h3 { margin: 6px 0 8px 0; }
-.cards-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 18px; margin-top: 12px; }
+/* Dptos Cards */
+.dpto-destacado {
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  border-radius: 14px;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 22px rgba(20,24,30,0.06);
+  overflow: hidden;
+}
 
-.card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 22px rgba(20,24,30,0.06); display:flex; flex-direction:column; transition: transform 0.18s ease, box-shadow 0.18s ease; }
-.card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(20,24,30,0.10); }
-.card-image { width:100%; height:160px; object-fit:cover; display:block; background: #eef2ff; }
-.card-body { padding: 12px 14px; display:flex; flex-direction:column; gap:8px; }
-.card-meta { font-size:0.86rem; color:#55606a; }
+.dpto-media {
+  flex: 1 1 55%;
+  max-height: 320px;
+  overflow: hidden;
+}
+
+.dpto-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.dpto-info {
+  flex: 1 1 45%;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dpto-info h5 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.dpto-info .capacidad {
+  font-weight: bold;
+  color: #475569;
+}
+
 
 /* Ocultar cards (usado por JS) */
 .card.hidden { display: none !important; }
@@ -64,3 +98,59 @@ html, body { height: 100%; font-family: Inter, system-ui, -apple-system, "Segoe 
   .header-grid { flex-direction: column; align-items: flex-start; gap:12px; }
   .main-nav a { margin-left: 0; margin-right: 12px; }
 }
+
+/* Slider dentro de departamentos */
+.slider {
+  position: relative;
+  flex: 1 1 55%;
+  max-height: 320px;
+  overflow: hidden;
+}
+
+.slider .slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.slider img.active {
+  opacity: 1;
+  position: relative;
+}
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.slider button.prev {
+  left: 10px;
+}
+
+.slider button.next {
+  right: 10px;
+}
+
+.slider button:hover {
+  background: rgba(0,0,0,0.7);
+}
+

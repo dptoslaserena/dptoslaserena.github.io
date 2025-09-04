@@ -39,136 +39,92 @@
   </section>
 
   <main class="container">
-    <section id="oferta" class="cards-section">
+    
+    <section id="oferta" class="departamentos">
       <h3>Oferta: Departamentos disponibles</h3>
-      <p class="lead">Selecciona el número de personas en el formulario superior para ver sólo los departamentos adecuados.</p>
 
-      <div id="cardsGrid" class="cards-grid">
-        <!-- Cada card tiene atributos data-min y data-max indicando la capacidad mínima y máxima -->
-        <!-- Reemplaza dptoX.jpg por tus imágenes -->
-        <article class="card" data-min="1" data-max="2">
-          <img class="card-image" src="Images\Oceanic - Vista general.jpg" alt="Departamento 1" />
-          <div class="card-body">
-            <h4>Departamento 816 — 4-5 personas</h4>
-            <p>Disfruta de una amplia vista al mar en este Departamento.</p>
-            <div class="card-meta">Condominio: Oceanic · Capacidad: 4-5</div>
-            <a class="btn" href="#contacto">Contactar</a>
-          </div>
-        </article>
+          <!-- Primera línea -->
+      <h4>Primera línea</h4>
+    <article class="dpto-destacado">
+     <div class="dpto-media slider">
+            <div class="slides">
+          <img src="Images\Oceanic\Oceanic - Vista general.jpg" alt="Oceanic vista living" class="active">
+          <img src="Images\Oceanic\Balcon.jpg" alt="Oceanic balcón">
+          <img src="Images\Oceanic\Bano.jpg" alt="Oceanic dormitorio">
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+            </div>
 
-        <article class="card" data-min="2" data-max="3">
-          <img class="card-image" src="dpto2.jpg" alt="Departamento 2" />
-          <div class="card-body">
-            <h4>Departamento 2 — 2–3 personas</h4>
-            <p>1 dormitorio + living, cocina separada, ideal para pareja con hijo.</p>
-            <div class="card-meta">Condominio: Oceanic · Capacidad: 2-3</div>
-            <a class="btn" href="#contacto">Contactar</a>
-          </div>
-        </article>
-
-        <article class="card" data-min="3" data-max="4">
-          <img class="card-image" src="dpto3.jpg" alt="Departamento 3" />
-          <div class="card-body">
-            <h4>Departamento 3 — 3–4 personas</h4>
-            <p>2 dormitorios, cocina amplia y patio.</p>
-            <div class="card-meta">Condominio: Los Pinos · Capacidad: 3-4</div>
-            <a class="btn" href="#contacto">Contactar</a>
-          </div>
-        </article>
-
-        <article class="card" data-min="4" data-max="5">
-          <img class="card-image" src="dpto4.jpg" alt="Departamento 4" />
-          <div class="card-body">
-            <h4>Departamento 4 — 4–5 personas</h4>
-            <p>3 dormitorios, dos baños, ideal para familias grandes.</p>
-            <div class="card-meta">Condominio: Brisas · Capacidad: 4-5</div>
-            <a class="btn" href="#contacto">Contactar</a>
-          </div>
-        </article>
-
-        <article class="card" data-min="1" data-max="1">
-          <img class="card-image" src="dpto5.jpg" alt="Departamento 5" />
-          <div class="card-body">
-            <h4>Departamento 5 — 1 persona</h4>
-            <p>Ideal para estudiante o trabajador soltero.</p>
-            <div class="card-meta">Condominio: Central · Capacidad: 1</div>
-            <a class="btn" href="#contacto">Contactar</a>
-          </div>
-        </article>
-
-        <article class="card" data-min="2" data-max="4">
-          <img class="card-image" src="dpto6.jpg" alt="Departamento 6" />
-          <div class="card-body">
-            <h4>Departamento 6 — 2–4 personas</h4>
-            <p>Amplio living comedor y balcón con vista.</p>
-            <div class="card-meta">Condominio: Oceanic · Capacidad: 2-4</div>
-            <a class="btn" href="#contacto">Contactar</a>
-          </div>
-        </article>
-
-        <article class="card" data-min="3" data-max="5">
-          <img class="card-image" src="dpto7.jpg" alt="Departamento 7" />
-          <div class="card-body">
-            <h4>Departamento 7 — 3–5 personas</h4>
-            <p>Diseño moderno, terraza y parrilla propia.</p>
-            <div class="card-meta">Condominio: VistaMar · Capacidad: 3-5</div>
-            <a class="btn" href="#contacto">Contactar</a>
-          </div>
-        </article>
-
-        <article class="card" data-min="2" data-max="2">
-          <img class="card-image" src="dpto8.jpg" alt="Departamento 8" />
-          <div class="card-body">
-            <h4>Departamento 8 — 2 personas</h4>
-            <p>Cómodo para pareja, zona tranquila.</p>
-            <div class="card-meta">Condominio: Los Pinos · Capacidad: 2</div>
-            <a class="btn" href="#contacto">Contactar</a>
-          </div>
-        </article>
-
-        <article class="card" data-min="4" data-max="6">
-          <img class="card-image" src="dpto9.jpg" alt="Departamento 9" />
-          <div class="card-body">
-            <h4>Departamento 9 — 4–6 personas</h4>
-            <p>Gran capacidad, ideal para grupos o familias numerosas.</p>
-            <div class="card-meta">Condominio: Brisas · Capacidad: 4-6</div>
-            <a class="btn" href="#contacto">Contactar</a>
-          </div>
-        </article>
-
-        <article class="card" data-min="1" data-max="3">
-          <img class="card-image" src="dpto10.jpg" alt="Departamento 10" />
-          <div class="card-body">
-            <h4>Departamento 10 — 1–3 personas</h4>
-            <p>Flexible y bien ubicado, cerca de comercios.</p>
-            <div class="card-meta">Condominio: Marina · Capacidad: 1-3</div>
-            <a class="btn" href="#contacto">Contactar</a>
-          </div>
-        </article>
-
-        <article class="card" data-min="2" data-max="5">
-          <img class="card-image" src="dpto11.jpg" alt="Departamento 11" />
-          <div class="card-body">
-            <h4>Departamento 11 — 2–5 personas</h4>
-            <p>Espacios amplios y buena iluminación natural.</p>
-            <div class="card-meta">Condominio: VistaMar · Capacidad: 2-5</div>
-            <a class="btn" href="#contacto">Contactar</a>
-          </div>
-        </article>
-
-        <article class="card" data-min="3" data-max="4">
-          <img class="card-image" src="dpto12.jpg" alt="Departamento 12" />
-          <div class="card-body">
-            <h4>Departamento 12 — 3–4 personas</h4>
-            <p>Dos dormitorios, balcón y cochera incluida.</p>
-            <div class="card-meta">Condominio: Central · Capacidad: 3-4</div>
-            <a class="btn" href="#contacto">Contactar</a>
-          </div>
-        </article>
+      <div class="dpto-info">
+        <h5>Condominio Oceanic</h5>
+        <p>Amplio departamento con vista al mar, ideal para familias.</p>
+        <p class="capacidad">Capacidad: 4–5 personas</p>
+        <a class="btn" href="#contacto">Contactar</a>
       </div>
+    </article>
 
-      <p id="noResults" class="no-results" hidden>No se encontraron departamentos para esa cantidad de personas.</p>
-    </section>
+          <!-- Segunda línea -->
+      <h4>Segunda línea</h4>
+      <article class="dpto-destacado">
+        <div class="dpto-media slider">
+            <div class="slides">
+          <img src="Images\Oceanic\Oceanic - Vista general.jpg" alt="Oceanic vista living" class="active">
+          <img src="Images\Oceanic\Balcon.jpg" alt="Oceanic balcón">
+          <img src="Images\Oceanic\Bano.jpg" alt="Oceanic dormitorio">
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+            </div>
+
+      <div class="dpto-info">
+        <h5>Condominio Reinos de Italia</h5>
+        <p>Modelo con 2 dormitorios y cocina integrada.</p>
+        <p class="capacidad">Capacidad: 3–4 personas</p>
+        <a class="btn" href="#contacto">Contactar</a>
+      </div>
+    </article>
+
+    <article class="dpto-destacado">
+       <div class="dpto-media slider">
+            <div class="slides">
+          <img src="Images\Oceanic\Oceanic - Vista general.jpg" alt="Oceanic vista living" class="active">
+          <img src="Images\Oceanic\Balcon.jpg" alt="Oceanic balcón">
+          <img src="Images\Oceanic\Bano.jpg" alt="Oceanic dormitorio">
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+            </div>
+
+      <div class="dpto-info">
+        <h5>Condominio Reinos de Holanda</h5>
+        <p>Diseño moderno con terraza y vista panorámica.</p>
+        <p class="capacidad">Capacidad: 2–3 personas</p>
+        <a class="btn" href="#contacto">Contactar</a>
+      </div>
+    </article>
+
+      <!-- Segunda línea Monoambiente -->
+    <h4>Segunda línea Monoambiente</h4>
+      <article class="dpto-destacado">
+       <div class="dpto-media slider">
+            <div class="slides">
+          <img src="Images\Oceanic\Oceanic - Vista general.jpg" alt="Oceanic vista living" class="active">
+          <img src="Images\Oceanic\Balcon.jpg" alt="Oceanic balcón">
+          <img src="Images\Oceanic\Bano.jpg" alt="Oceanic baño">
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+            </div>
+
+    <div class="dpto-info">
+      <h5>Monoambiente adaptado</h5>
+      <p>Pequeño pero funcional, perfecto para 1 persona.</p>
+      <p class="capacidad">Capacidad: 1 persona</p>
+      <a class="btn" href="#contacto">Contactar</a>
+    </div>
+  </article>
+</section>
 
     <section id="ubicacion" class="map-sim">
       <h3>Ubicación</h3>
