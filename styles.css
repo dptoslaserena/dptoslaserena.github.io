@@ -30,6 +30,31 @@ html, body { height: 100%; font-family: Inter, system-ui, -apple-system, "Segoe 
 .hero-form .hero-form-actions { margin-top:10px; display:flex; gap:8px; align-items:center; }
 .hint { margin-top:8px; font-size:0.85rem; color:#475569; }
 
+.hero-buttons {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero-buttons .btn {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #0077b6; /* tu color principal */
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+  background: #023e8a; /* tono más oscuro */
+}
+
+
 /* Buttons */
 .btn { display:inline-block; padding:8px 12px; background:#1f6feb; color:white; text-decoration:none; border-radius:8px; font-weight:700; cursor:pointer; border: none; }
 .btn.secondary { background: #6b7280; }
@@ -152,5 +177,34 @@ html, body { height: 100%; font-family: Inter, system-ui, -apple-system, "Segoe 
 
 .slider button:hover {
   background: rgba(0,0,0,0.7);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.modal {
+  display: none; /* oculto por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5); /* overlay oscuro */
+  justify-content: center; align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 

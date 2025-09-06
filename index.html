@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>La Serena Viajes - Departamentos</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-grid">
       <!-- Logo: reemplaza logo.png por tu archivo -->
       <div class="logo-wrap">
-        <img src="Images\Logo.jpg" alt="Logo del negocio" class="logo-img" />
+        <img src="Images\Logo.png" alt="Logo del negocio" class="logo-img" />
         <h1 class="site-title">La Serena Viajes</h1>
       </div>
       <nav class="main-nav" aria-label="Navegación principal">
@@ -25,17 +26,29 @@
   <!-- HERO con imagen grande (La Serena). Guarda tu imagen como la_serena.jpg en la misma carpeta -->
   <section class="hero" id="hero">
     <img src="Images\LaSerena.jpg" alt="La Serena - panorámica" class="hero-bg" />
-    <!-- Form encima de la imagen -->
-    <form id="filterForm" class="hero-form" aria-label="Buscar por cantidad de personas">
+        <!-- Pregunta encima de la imagen -->
+    <div id="hero-question" class="hero-form" aria-label="Elegir por cantidad de personas">
       <h2>¡Encuentra tu departamento ideal!</h2>
-      <label for="people">Cantidad de personas</label>
-      <input id="people" name="people" type="number" min="1" max="12" placeholder="Ej: 3" required />
-      <div class="hero-form-actions">
-        <button type="submit" class="btn">Buscar</button>
-        <button type="button" id="clearFilter" class="btn secondary">Mostrar todos</button>
+      <p>¿Para cuántas personas estás buscando?</p>
+      <div class="hero-buttons">
+        <a href="#monoambiente" class="btn">1-2 personas</a>
+        <a href="#a1" class="btn">3 personas</a>
+        <a href="#a1" class="btn">4 personas</a>
+        <a href="#a2" class="btn">5 personas</a>
+                                <!-- Botón -->
+                        <a href="#" id="btn-mas6" class="btn">Más de 6 personas</a>
+
+                        <!-- Modal -->
+                        <div id="modal-mas6" class="modal">
+                          <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h3>Aviso</h3>
+                            <p>No contamos con departamentos para más de 6 personas.</p>
+                            <p>Una opción es alquilar dos unidades cercanas entre sí.</p>
+                          </div>
+                        </div>
       </div>
-      <p class="hint">Introduce el número de personas y haz clic en Buscar para filtrar los departamentos.</p>
-    </form>
+    </div>
   </section>
 
   <main class="container">
@@ -43,35 +56,83 @@
     <section id="oferta" class="departamentos">
       <h3>Oferta: Departamentos disponibles</h3>
 
-          <!-- Primera línea -->
-      <h4>Primera línea</h4>
-    <article class="dpto-destacado">
-     <div class="dpto-media slider">
-            <div class="slides">
-          <img src="Images\Oceanic\Oceanic - Vista general.jpg" alt="Oceanic vista living" class="active">
-          <img src="Images\Oceanic\Balcon.jpg" alt="Oceanic balcón">
-          <img src="Images\Oceanic\Bano.jpg" alt="Oceanic dormitorio">
+              <!-- Primera línea -->
+    <h4>Primera línea</h4>
+    <article id="a1" class="dpto-destacado">
+      <div class="dpto-media slider">
+        <div class="slides">
+
+          <a href="Images\Oceanic\Oceanic - 816 - Cama matrimonial.jpg" data-lightbox="oceanic" data-title="Cama matrimonial">
+            <img src="Images/Oceanic/Oceanic - Cama - Recortada.jpg" alt="Oceanic Cama matrimonial" class="active">
+          </a>
+
+          <a href="Images/Oceanic/Oceanic - 816 - Dormitorio.jpg" data-lightbox="oceanic" data-title="Dormitorio">
+            <img src="Images/Oceanic/Oceanic - 816 - Dormitorio.jpg" alt="Oceanic dormitorio">
+          </a>
+
+          <a href="Images/Oceanic/Oceanic - 816 - Cocina.jpg" data-lightbox="oceanic" data-title="Cocina">
+            <img src="Images/Oceanic/Oceanic - 816 - Cocina.jpg" alt="Oceanic cocina">
+          </a>
+
+          <a href="Images/Oceanic/Balcon.jpg" data-lightbox="oceanic" data-title="Balcón">
+            <img src="Images/Oceanic/Balcon.jpg" alt="Oceanic Balcon">
+          </a>
+
+          <a href="Images/Oceanic/Oceanic - Bano - Recortada.jpg" data-lightbox="oceanic" data-title="Baño">
+            <img src="Images/Oceanic/Oceanic - Bano - Recortada.jpg" alt="Oceanic bano">
+          </a>
+
+          <a href="Images/Oceanic/Oceanic - Pileta entre edificios.jpg" data-lightbox="oceanic" data-title="Piscina del condominio">
+            <img src="Images/Oceanic/Oceanic - Pileta entre edificios.jpg" alt="Oceanic pileta">
+          </a>
+
+          <a href="Images/Oceanic/Oceanic - Vista de dentro 2.jpg" data-lightbox="oceanic" data-title="Vista interior del condominio">
+            <img src="Images/Oceanic/Oceanic - Vista de dentro 2.jpg" alt="Oceanic Vista de dentro">
+          </a>
+
+          <a href="Images/Oceanic/Oceanic - Vista general.jpg" data-lightbox="oceanic" data-title="Vista del condominio desde afuera">
+            <img src="Images/Oceanic/Oceanic - Vista general.jpg" alt="Oceanic vista de afuera">
+          </a>
+
         </div>
         <button class="prev">&#10094;</button>
         <button class="next">&#10095;</button>
-            </div>
+      </div>
 
       <div class="dpto-info">
         <h5>Condominio Oceanic</h5>
         <p>Amplio departamento con vista al mar, ideal para familias.</p>
-        <p class="capacidad">Capacidad: 4–5 personas</p>
+        <p class="capacidad">Capacidad: Hasta 4 personas</p>
         <a class="btn" href="#contacto">Contactar</a>
       </div>
     </article>
+
 
           <!-- Segunda línea -->
       <h4>Segunda línea</h4>
       <article class="dpto-destacado">
         <div class="dpto-media slider">
             <div class="slides">
-          <img src="Images\Oceanic\Oceanic - Vista general.jpg" alt="Oceanic vista living" class="active">
-          <img src="Images\Oceanic\Balcon.jpg" alt="Oceanic balcón">
-          <img src="Images\Oceanic\Bano.jpg" alt="Oceanic dormitorio">
+           <a href="Images\Italia\f5.jpeg" data-lightbox="italia" data-title="Cama matrimonial">
+            <img src="Images\Italia\f5.jpeg" alt="Italia Cama" class="active">
+          </a>
+          
+          <a href="Images\Italia\f4.jpeg" data-lightbox="italia" data-title="Dormitorio">
+            <img src="Images\Italia\f4.jpeg" alt="Italia Dormitorio">
+          </a>
+
+          <a href="Images\Italia\f1.jpeg" data-lightbox="italia" data-title="Living">
+            <img src="Images\Italia\f1.jpeg" alt="Italia living" >
+          </a>
+
+          <a href="Images\Italia\f2.jpeg" data-lightbox="italia" data-title="Cocina">
+            <img src="Images\Italia\f2.jpeg" alt="Italia cocina">
+          </a>
+
+          <a href="Images\Italia\f3.jpeg" data-lightbox="italia" data-title="Comedor">
+            <img src="Images\Italia\f3.jpeg" alt="Italia comedor">
+          </a>
+
         </div>
         <button class="prev">&#10094;</button>
         <button class="next">&#10095;</button>
@@ -80,17 +141,53 @@
       <div class="dpto-info">
         <h5>Condominio Reinos de Italia</h5>
         <p>Modelo con 2 dormitorios y cocina integrada.</p>
-        <p class="capacidad">Capacidad: 3–4 personas</p>
+        <p class="capacidad">Capacidad: Hasta 4 personas</p>
         <a class="btn" href="#contacto">Contactar</a>
       </div>
     </article>
 
-    <article class="dpto-destacado">
+    <article id="a2" class="dpto-destacado">
        <div class="dpto-media slider">
             <div class="slides">
-          <img src="Images\Oceanic\Oceanic - Vista general.jpg" alt="Oceanic vista living" class="active">
-          <img src="Images\Oceanic\Balcon.jpg" alt="Oceanic balcón">
-          <img src="Images\Oceanic\Bano.jpg" alt="Oceanic dormitorio">
+          <a href="Images\Holanda\Camanuevo.jpg" data-lightbox="Holanda" data-title="Cama matrimonial">
+            <img src="Images\Holanda\Camanuevo.jpg" alt="Holanda Cama matrimonial" class="active">
+          </a>
+
+          <a href="Images\Holanda\Dormitorio.jpg" data-lightbox="Holanda" data-title="Dormitorio">
+            <img src="Images\Holanda\Dormitorio.jpg" alt="Holanda dormitorio">
+          </a>
+
+          <a href="Images\Holanda\Piecitanuevo.jpg" data-lightbox="Holanda" data-title="Dormitorio adicional">
+            <img src="Images\Holanda\Piecitanuevo.recortada.jpg" alt="Holanda Dormitorio adicional">
+          </a>
+
+          <a href="Images\Holanda\Livingnuevo.jpg" data-lightbox="Holanda" data-title="Living">
+            <img src="Images\Holanda\Livingnuevo.jpg" alt="Holanda Living">
+          </a>
+
+          <a href="Images\Holanda\Cocina2.jpg" data-lightbox="Holanda" data-title="Vista general de la cocina">
+            <img src="Images\Holanda\Cocina2.jpg" alt="Holanda Vista cocina">
+          </a>
+
+          <a href="Images\Holanda\cocina.png" data-lightbox="Holanda" data-title="Vista interior de la cocina">
+            <img src="Images\Holanda\cocina.png" alt="Holanda vista cocina interior">
+          </a>
+
+          <a href="Images\Holanda\Cocina3.jpg" data-lightbox="Holanda" data-title="Lavadero">
+            <img src="Images\Holanda\Cocina3.jpg" alt="Holanda lavadero">
+          </a>
+
+          <a href="Images\Holanda\panoramica.jpg" data-lightbox="Holanda" data-title="Vista general">
+            <img src="Images\Holanda\panoramica.jpg" alt="Holanda panoramica">
+
+          </a>
+           <a href="Images\Holanda\Quincho.jpg" data-lightbox="Holanda" data-title="Quincho">
+            <img src="Images\Holanda\Quincho.jpg" alt="Holanda Quincho">
+          </a>
+
+           <a href="Images\Holanda\Edificio.jpg" data-lightbox="Holanda" data-title="Edificio">
+            <img src="Images\Holanda\Edificio.jpg" alt="Holanda Edificio">
+          </a>
         </div>
         <button class="prev">&#10094;</button>
         <button class="next">&#10095;</button>
@@ -99,28 +196,44 @@
       <div class="dpto-info">
         <h5>Condominio Reinos de Holanda</h5>
         <p>Diseño moderno con terraza y vista panorámica.</p>
-        <p class="capacidad">Capacidad: 2–3 personas</p>
+        <p class="capacidad">Capacidad: Hasta 5 personas</p>
         <a class="btn" href="#contacto">Contactar</a>
       </div>
     </article>
 
       <!-- Segunda línea Monoambiente -->
-    <h4>Segunda línea Monoambiente</h4>
-      <article class="dpto-destacado">
+    <h4>Segunda línea, Monoambiente</h4>
+      <article id="monoambiente" class="dpto-destacado">
        <div class="dpto-media slider">
             <div class="slides">
-          <img src="Images\Oceanic\Oceanic - Vista general.jpg" alt="Oceanic vista living" class="active">
-          <img src="Images\Oceanic\Balcon.jpg" alt="Oceanic balcón">
-          <img src="Images\Oceanic\Bano.jpg" alt="Oceanic baño">
+          <a href="Images\Monoambiente\Panoramica cama.jpg" data-lightbox="SerenaPacifico" data-title="Cama matrimonial">
+            <img src="Images\Monoambiente\Panoramica cama.jpg" alt="SerenaPacifico Cama matrimonial" class="active">
+          </a>
+
+          <a href="Images\Monoambiente\Puerta.jpg" data-lightbox="SerenaPacifico" data-title="Baño y entrada">
+            <img src="Images\Monoambiente\Puerta.jpg" alt="SerenaPacifico puerta">
+          </a>
+
+          <a href="Images\Monoambiente\Cocina.jpg" data-lightbox="SerenaPacifico" data-title="Cocina">
+            <img src="Images\Monoambiente\Cocina.jpg" alt="SerenaPacifico cocina">
+          </a>
+
+          <a href="Images\Monoambiente\Monoambiente-pileta.jpg" data-lightbox="SerenaPacifico" data-title="Piscina del condominio">
+            <img src="Images\Monoambiente\Monoambiente-pileta.jpg" alt="Serena Pacifico Piscina">
+          </a>
+
+          <a href="Images\Monoambiente\Monoambiente-Quincho.jpg" data-lightbox="SerenaPacifico" data-title="Quincho del condominio">
+            <img src="Images\Monoambiente\Monoambiente-Quincho.jpg" alt="Serena Pacifico Quincho">
+          </a>
         </div>
         <button class="prev">&#10094;</button>
         <button class="next">&#10095;</button>
             </div>
 
     <div class="dpto-info">
-      <h5>Monoambiente adaptado</h5>
-      <p>Pequeño pero funcional, perfecto para 1 persona.</p>
-      <p class="capacidad">Capacidad: 1 persona</p>
+      <h5>Condominio Serena Pacífico</h5>
+      <p>Pequeño pero funcional.</p>
+      <p class="capacidad">Capacidad: Hasta 2 personas</p>
       <a class="btn" href="#contacto">Contactar</a>
     </div>
   </article>
@@ -144,5 +257,12 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+  <script>
+lightbox.option({
+  'resizeDuration': 200,
+  'wrapAround': true
+})
+</script>
 </body>
 </html>
