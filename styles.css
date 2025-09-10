@@ -1,5 +1,9 @@
 /* styles.css - Guarda en la misma carpeta que index.html */
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Reset básico */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { height: 100%; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: #f6f7fb; color: #0f1724; }
@@ -178,9 +182,7 @@ html, body { height: 100%; font-family: Inter, system-ui, -apple-system, "Segoe 
 .slider button:hover {
   background: rgba(0,0,0,0.7);
 }
-html {
-  scroll-behavior: smooth;
-}
+
 
 .modal {
   display: none; /* oculto por defecto */
@@ -207,4 +209,46 @@ html {
   font-size: 1.5rem;
   cursor: pointer;
 }
+/* Contenedor del mapa */
+#map {
+  width: 100%;
+  height: 400px;   /* Ajustá según tu diseño */
+  border-radius: 12px; /* opcional */
+}
 
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 70px;
+  height: 70px;
+  background-color: #25D366; /* verde WhatsApp */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 100;
+  animation: pulse 2s infinite;
+  transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-icon {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg');
+  background-size: 60% 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Animación de pulso */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}

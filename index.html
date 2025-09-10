@@ -4,8 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>La Serena Viajes - Departamentos</title>
+
+  <!--links-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
 </head>
 <body>
   <header class="site-header">
@@ -31,20 +35,20 @@
       <h2>¡Encuentra tu departamento ideal!</h2>
       <p>¿Para cuántas personas estás buscando?</p>
       <div class="hero-buttons">
-        <a href="#monoambiente" class="btn">1-2 personas</a>
+        <a href="#a4" class="btn">1-2 personas</a>
         <a href="#a1" class="btn">3 personas</a>
         <a href="#a1" class="btn">4 personas</a>
         <a href="#a2" class="btn">5 personas</a>
                                 <!-- Botón -->
-                        <a href="#" id="btn-mas6" class="btn">Más de 6 personas</a>
+                        <a href="#" id="btn-mas6" class="btn">6 personas o más</a>
 
                         <!-- Modal -->
                         <div id="modal-mas6" class="modal">
                           <div class="modal-content">
                             <span class="close">&times;</span>
                             <h3>Aviso</h3>
-                            <p>No contamos con departamentos para más de 6 personas.</p>
-                            <p>Una opción es alquilar dos unidades cercanas entre sí.</p>
+                            <p>No contamos con departamentos para 6 personas o más.</p>
+                            <p><i>Una opción es alquilar dos unidades cercanas entre sí.</i></p>
                           </div>
                         </div>
       </div>
@@ -54,10 +58,51 @@
   <main class="container">
     
     <section id="oferta" class="departamentos">
-      <h3>Oferta: Departamentos disponibles</h3>
+      <h3>Oferta: Departamentos disponibles</h3> <br>
 
+           <!-- Segunda línea Monoambiente -->
+    <h4 class="segunda-linea-monoambiente">Monoambiente</h4>
+
+      <article id="a4" class="dpto-destacado">
+       <div class="dpto-media slider">
+            <div class="slides">
+          <a href="Images\Monoambiente\Panoramica cama.jpg" data-lightbox="SerenaPacifico" data-title="Cama matrimonial">
+            <img src="Images\Monoambiente\Panoramica cama.jpg" alt="SerenaPacifico Cama matrimonial" class="active">
+          </a>
+
+          <a href="Images\Monoambiente\Puerta.jpg" data-lightbox="SerenaPacifico" data-title="Baño y entrada">
+            <img src="Images\Monoambiente\Puerta.jpg" alt="SerenaPacifico puerta">
+          </a>
+
+          <a href="Images\Monoambiente\Cocina.jpg" data-lightbox="SerenaPacifico" data-title="Cocina">
+            <img src="Images\Monoambiente\Cocina.jpg" alt="SerenaPacifico cocina">
+          </a>
+
+          <a href="Images\Monoambiente\Monoambiente-pileta.jpg" data-lightbox="SerenaPacifico" data-title="Piscina del condominio">
+            <img src="Images\Monoambiente\Monoambiente-pileta.jpg" alt="Serena Pacifico Piscina">
+          </a>
+
+          <a href="Images\Monoambiente\Monoambiente-Quincho.jpg" data-lightbox="SerenaPacifico" data-title="Quincho del condominio">
+            <img src="Images\Monoambiente\Monoambiente-Quincho.jpg" alt="Serena Pacifico Quincho">
+          </a>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+            </div>
+
+    <div class="dpto-info">
+      <h5>Condominio Serena Pacífico</h5>
+      <p>Pequeño pero funcional.</p>
+      <p class="capacidad">Capacidad: Hasta 2 personas</p>
+      <a class="btn" href="#contacto">Contactar</a>
+    </div>
+  </article>
+
+
+      
               <!-- Primera línea -->
-    <h4>Primera línea</h4>
+    <h4 class="primera-linea">Primera Línea</h4>
+
     <article id="a1" class="dpto-destacado">
       <div class="dpto-media slider">
         <div class="slides">
@@ -109,8 +154,9 @@
 
 
           <!-- Segunda línea -->
-      <h4>Segunda línea</h4>
-      <article class="dpto-destacado">
+      <h4 class="segunda-linea">Segunda Línea</h4>
+
+      <article id = "a2" class="dpto-destacado">
         <div class="dpto-media slider">
             <div class="slides">
            <a href="Images\Italia\f5.jpeg" data-lightbox="italia" data-title="Cama matrimonial">
@@ -141,12 +187,12 @@
       <div class="dpto-info">
         <h5>Condominio Reinos de Italia</h5>
         <p>Modelo con 2 dormitorios y cocina integrada.</p>
-        <p class="capacidad">Capacidad: Hasta 4 personas</p>
+        <p class="capacidad">Capacidad: Hasta 5 personas</p>
         <a class="btn" href="#contacto">Contactar</a>
       </div>
     </article>
 
-    <article id="a2" class="dpto-destacado">
+    <article id="a3" class="dpto-destacado">
        <div class="dpto-media slider">
             <div class="slides">
           <a href="Images\Holanda\Camanuevo.jpg" data-lightbox="Holanda" data-title="Cama matrimonial">
@@ -200,60 +246,28 @@
         <a class="btn" href="#contacto">Contactar</a>
       </div>
     </article>
-
-      <!-- Segunda línea Monoambiente -->
-    <h4>Segunda línea, Monoambiente</h4>
-      <article id="monoambiente" class="dpto-destacado">
-       <div class="dpto-media slider">
-            <div class="slides">
-          <a href="Images\Monoambiente\Panoramica cama.jpg" data-lightbox="SerenaPacifico" data-title="Cama matrimonial">
-            <img src="Images\Monoambiente\Panoramica cama.jpg" alt="SerenaPacifico Cama matrimonial" class="active">
-          </a>
-
-          <a href="Images\Monoambiente\Puerta.jpg" data-lightbox="SerenaPacifico" data-title="Baño y entrada">
-            <img src="Images\Monoambiente\Puerta.jpg" alt="SerenaPacifico puerta">
-          </a>
-
-          <a href="Images\Monoambiente\Cocina.jpg" data-lightbox="SerenaPacifico" data-title="Cocina">
-            <img src="Images\Monoambiente\Cocina.jpg" alt="SerenaPacifico cocina">
-          </a>
-
-          <a href="Images\Monoambiente\Monoambiente-pileta.jpg" data-lightbox="SerenaPacifico" data-title="Piscina del condominio">
-            <img src="Images\Monoambiente\Monoambiente-pileta.jpg" alt="Serena Pacifico Piscina">
-          </a>
-
-          <a href="Images\Monoambiente\Monoambiente-Quincho.jpg" data-lightbox="SerenaPacifico" data-title="Quincho del condominio">
-            <img src="Images\Monoambiente\Monoambiente-Quincho.jpg" alt="Serena Pacifico Quincho">
-          </a>
-        </div>
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
-            </div>
-
-    <div class="dpto-info">
-      <h5>Condominio Serena Pacífico</h5>
-      <p>Pequeño pero funcional.</p>
-      <p class="capacidad">Capacidad: Hasta 2 personas</p>
-      <a class="btn" href="#contacto">Contactar</a>
-    </div>
-  </article>
 </section>
 
     <section id="ubicacion" class="map-sim">
       <h3>Ubicación</h3>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3458.0326113667898!2d-71.27896562594296!3d-29.920963325558525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9691ca22bd8c4001%3A0x50b21b5af5223fc3!2sCondominio%20Edificio%20Oceanic!5e0!3m2!1ses!2sar!4v1756835180135!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div id="map"></div>
+
+            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+            <script src="script.js"></script>
+
     </section>
 
     <section id="contacto" class="contact">
       <h3>Contacto</h3>
       <p>Para consultas escriba al +54 9 264 580-8944.</p>
-    </section>
+    </section> 
   </main>
 
   <footer class="site-footer">
     <div class="container">
       <p>© 2025 La Serena Viajes. Todos los derechos reservados.</p>
     </div>
+
   </footer>
 
   <script src="script.js"></script>
@@ -264,5 +278,10 @@ lightbox.option({
   'wrapAround': true
 })
 </script>
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/5492645808944" target="_blank" class="whatsapp-float">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  <i class="whatsapp-icon"></i>
+</a>
 </body>
 </html>
