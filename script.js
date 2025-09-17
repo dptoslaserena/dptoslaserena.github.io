@@ -70,3 +70,13 @@ condominios.forEach(c => {
 // Ajustar el mapa para mostrar todos los marcadores
 var grupo = L.featureGroup(condominios.map(c => L.marker(c.coords)));
 map.fitBounds(grupo.getBounds().pad(0.3));
+
+// Para que no moleste el mapa al scrollear, desactiva el drag si lo pones con un dedo
+map.dragging.disable();
+map.on('touchstart', function(e) {
+  if (e.originalEvent.touches.length == 2) map.dragging.enable();
+});
+map.on('touchend', function(e) {
+  map.dragging.disable();
+});
+
