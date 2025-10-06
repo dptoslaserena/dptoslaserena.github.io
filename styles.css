@@ -1,31 +1,23 @@
-/* styles.css - Guarda en la misma carpeta que index.html */
-
 html {
   scroll-behavior: smooth;
 }
-
 /* Reset básico */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { height: 100%; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: #f6f7fb; color: #0f1724; }
-
 /* Contenedor */
 .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
-
 /* Header */
 .site-header { background: linear-gradient(90deg,#0f1724 0%, #1b2a47 100%); color: white; }
 .header-grid { display:flex; align-items:center; justify-content:space-between; gap: 16px; padding: 16px 20px; }
 .logo-wrap { display:flex; align-items:center; gap:12px; }
 .logo-img { width:70px; height:70px; object-fit:contain; border-radius:8px; background: rgba(255,255,255,0.06); padding:6px; }
 .site-title { font-size:1.2rem; font-weight:700; color:white; }
-
 /* Navegación */
 .main-nav a { color: rgba(255,255,255,0.95); text-decoration: none; margin-left: 14px; font-weight:600; font-size:0.95rem; }
 .main-nav a:hover { text-decoration: underline; }
-
 /* HERO */
 .hero { position: relative; width: 100%; height: 370px; margin-bottom: 22px; overflow: hidden; border-radius: 0px; }
 .hero-bg { width: 100%; height: 100%; object-fit: cover; object-position: middle; display:block; filter: brightness(0.55) saturate(1.05); }
-
 /* Form encima (overlay) */
 .hero-form { position: absolute; left: 20px; top: 20px; max-width: 420px; background: rgba(255,255,255,0.94); padding: 18px; border-radius: 10px; box-shadow: 0 10px 30px rgba(10,15,30,0.18); }
 .hero-form h2 { font-size:1.1rem; margin-bottom:8px; color:#0f1724; }
@@ -33,14 +25,12 @@ html, body { height: 100%; font-family: Inter, system-ui, -apple-system, "Segoe 
 .hero-form input { width:100%; padding:10px; margin-top:8px; border-radius:8px; border:1px solid #d1d5db; font-size:1rem; }
 .hero-form .hero-form-actions { margin-top:10px; display:flex; gap:8px; align-items:center; }
 .hint { margin-top:8px; font-size:0.85rem; color:#475569; }
-
 .hero-buttons {
   margin-top: 12px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
-
 .hero-buttons .btn {
   flex: 1;
   min-width: 120px;
@@ -53,17 +43,13 @@ html, body { height: 100%; font-family: Inter, system-ui, -apple-system, "Segoe 
   font-weight: 600;
   transition: background 0.3s ease;
 }
-
 .hero-buttons .btn:hover {
   background: #023e8a; /* tono más oscuro */
 }
-
-
 /* Buttons */
 .btn { display:inline-block; padding:8px 12px; background:#1f6feb; color:white; text-decoration:none; border-radius:8px; font-weight:700; cursor:pointer; border: none; }
 .btn.secondary { background: #6b7280; }
 .btn:active { transform: translateY(1px); }
-
 /* Dptos Cards */
 .dpto-destacado {
   display: flex;
@@ -74,20 +60,17 @@ html, body { height: 100%; font-family: Inter, system-ui, -apple-system, "Segoe 
   box-shadow: 0 8px 22px rgba(20,24,30,0.06);
   overflow: hidden;
 }
-
 .dpto-media {
   flex: 1 1 55%;
   max-height: 320px;
   overflow: hidden;
 }
-
 .dpto-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-
 .dpto-info {
   flex: 1 1 45%;
   padding: 18px;
@@ -96,30 +79,22 @@ html, body { height: 100%; font-family: Inter, system-ui, -apple-system, "Segoe 
   justify-content: center;
   gap: 10px;
 }
-
 .dpto-info h5 {
   font-size: 1.2rem;
   margin-bottom: 6px;
 }
-
 .dpto-info .capacidad {
   font-weight: bold;
   color: #475569;
 }
-
-
 /* Ocultar cards (usado por JS) */
 .card.hidden { display: none !important; }
-
 /* Mensaje sin resultados */
 .no-results { margin-top: 14px; color: #7f1d1d; background: #fff1f2; padding: 10px; border-radius: 8px; }
-
 /* About, map, contact sections */
 .map-sim, .contact { margin: 22px 0; background: white; padding: 14px; border-radius: 10px; box-shadow: 0 6px 16px rgba(15,20,30,0.04); }
-
 /* Footer */
 .site-footer { margin-top: 28px; padding: 18px 0; background: #0f1724; color: rgba(255,255,255,0.8); font-size:0.9rem; }
-
 /* Responsive adjustments */
 @media (max-width: 880px) {
   .hero { height: 420px; }
@@ -127,7 +102,6 @@ html, body { height: 100%; font-family: Inter, system-ui, -apple-system, "Segoe 
   .header-grid { flex-direction: column; align-items: flex-start; gap:12px; }
   .main-nav a { margin-left: 0; margin-right: 12px; }
 }
-
 /* Slider dentro de departamentos */
 .slider {
   position: relative;
@@ -135,13 +109,11 @@ html, body { height: 100%; font-family: Inter, system-ui, -apple-system, "Segoe 
   max-height: 320px;
   overflow: hidden;
 }
-
 .slider .slides {
   position: relative;
   width: 100%;
   height: 100%;
 }
-
 .slider img {
   width: 100%;
   height: 100%;
@@ -151,6 +123,14 @@ html, body { height: 100%; font-family: Inter, system-ui, -apple-system, "Segoe 
   left: 0;
   opacity: 0;
   transition: opacity 0.6s ease;
+}
+@media (min-width: 992px) {
+  
+ .dpto-info {
+    font-size: 0.9rem;
+    line-height: 1.1; /* menos separación entre líneas */
+  }
+
 }
 
 .slider img.active {
@@ -292,5 +272,55 @@ html, body { height: 100%; font-family: Inter, system-ui, -apple-system, "Segoe 
     .feature .material-icons {
       font-size: 20px;
       margin-right: 6px;
-      color: #2c7a7b; /* Verde azulado */
+      color: #004d59;
     }
+
+.precio {
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #007c91, #004d59);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.precio::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: black;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle; /* centrado aproximado */
+}
+
+
+.precio small {
+  font-size: 0.8rem;
+  -webkit-text-fill-color: #555;
+}
+
+/* Botón de WhatsApp / Contacto */
+.btn-contactar {
+  display: inline-flex;
+  align-items: center; /* alinea icono con texto */
+  gap: 6px; /* espacio entre icono y texto */
+  background-color: #2a5d7a; /* azul base */
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15); /* ligera sombra */
+  transform: translateY(0); /* estado normal */
+}
+
+.btn-contactar:hover {
+  background: linear-gradient(90deg, #468cb4, #2a5d7a);; /* hover con degradado turquesa */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* sombra más grande */
+  cursor: pointer;
+  transform: translateY(-1px); /* leve “flotado” al pasar mouse */
+}
